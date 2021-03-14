@@ -1,7 +1,8 @@
 import React, { useContext, useEffect } from 'react'
-import { Table } from 'react-bootstrap'
+import { Table, ProgressBar } from 'react-bootstrap'
 import { CurrencyContext } from '../../contexts/currencyContext'
 import Coin from '../Coin/Coin';
+import { currencyFormat } from "utils/index"
 
 const CurrencyTable = () => {
 
@@ -17,8 +18,18 @@ const CurrencyTable = () => {
         <td className="name">
           <Coin coin={coin} />
         </td>
-        <td>{coin.price}</td>
-        <td>{coin['1d'].volume}</td>
+        <td>{currencyFormat(Number(coin.price))}</td>
+        {/* <td>
+          {currencyFormat(parseInt(coin['1d'].price_change) / coin.price) + "%"}
+        </td> */}
+        <td>{currencyFormat(parseInt(coin.market_cap), 0)}</td>
+        <td>{currencyFormat(parseInt(coin['1d'].volume), 0)}</td>
+        <td>
+          <div className="circulating-supply">
+            {currencyFormat(parseInt(coin.circulating_supply), 0) + ' ' + coin.symbol}
+          </div>
+          <ProgressBar now={(coin.circulating_supply / coin.max_supply) * 100} />
+        </td>
       </tr>
     )
   })
@@ -30,7 +41,10 @@ const CurrencyTable = () => {
           <th>#</th>
           <th>Name</th>
           <th>Price</th>
-          <th>Volume</th>
+          {/* <th>24h %</th> */}
+          <th>Market Cap</th>
+          <th>Volume (24h)</th>
+          <th>Circulating Supply</th>
         </tr>
       </thead>
       <tbody>

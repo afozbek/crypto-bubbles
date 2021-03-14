@@ -39,5 +39,13 @@ $hs-bg-color: radial-gradient(
 
 #CoinTable {
   .coin-row {
+    .progress {
+      height: 6px;
+      width: 90%;
+      background-color: hsla(0, 0%, 100%, 0.15);
+      .progress-bar {
+        background-color: #93979e;
+      }
+    }
   }
 }
