@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from 'react'
 import { Table, ProgressBar } from 'react-bootstrap'
 import { CurrencyContext } from '../../contexts/currencyContext'
 import Coin from '../Coin/Coin';
-import { currencyFormat } from "utils/index"
+import { currencyFormat } from "../../utils"
 
 const CurrencyTable = () => {
 
