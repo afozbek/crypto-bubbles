@@ -4,12 +4,7 @@
   box-sizing: border-box;
 }
 
-$hs-bg-color: radial-gradient(
-    circle at 50% 800px,
-    hsla(158, 100%, 54%, 0.11),
-    transparent 50vw
-  ),
-  hsla(158, 6%, 9%, 1);
+$hs-bg-color: radial-gradient(circle at 50% 800px, hsla(158, 100%, 54%, 0.11), transparent 50vw), hsla(158, 6%, 9%, 1);
 
 #root {
   min-height: 100vh;

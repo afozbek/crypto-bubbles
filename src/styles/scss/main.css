@@ -1,0 +1,42 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  min-height: 100vh;
+  background: radial-gradient(circle at 50% 800px, rgba(20, 255, 169, 0.11), transparent 50vw), #161817;
+}
+
+.body-container {
+  margin: 100px 0;
+}
+
+.coin {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.coin img {
+  width: 30px;
+  height: 30px;
+  margin-right: 15px;
+}
+.coin .name {
+  font-weight: bolder;
+}
+.coin .symbol {
+  font-size: 13px;
+}
+
+#CoinTable .coin-row .progress {
+  height: 6px;
+  width: 90%;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+#CoinTable .coin-row .progress .progress-bar {
+  background-color: #93979e;
+}
+
+/*# sourceMappingURL=main.css.map */
